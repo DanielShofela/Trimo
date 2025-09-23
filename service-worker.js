@@ -1,13 +1,13 @@
 const CACHE_NAME = 'trimo-cache-v1';
 const urlsToCache = [
-  './',
-  './index.html',
-  './manifest.json',
-  './IconTrimo.png',
-  './HeaderTrimo.png',
-  './HeaderTrimo2.png',
-  './assets/index.css',
-  './assets/index.js'
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/IconTrimo.png',
+  '/HeaderTrimo.png',
+  '/HeaderTrimo2.png',
+  '/assets/index.css',
+  '/assets/index.js'
 ];
 
 self.addEventListener('install', event => {

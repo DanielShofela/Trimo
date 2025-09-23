@@ -6,7 +6,7 @@ interface LogoProps {
 }
 
 const Logo: React.FC<LogoProps> = ({ className, isDark = false }) => {
-  const headerImage = isDark ? './HeaderTrimo2.png' : './HeaderTrimo.png';
+  const headerImage = isDark ? '/HeaderTrimo2.png' : '/HeaderTrimo.png';
   
   return (
     <img
