@@ -1,0 +1,17 @@
+{
+  "short_name": "Trimo",
+  "name": "Gestionnaire de Notes Scolaires",
+  "description": "Une application de gestion personnelle des notes scolaires pour suivre les progrès académiques, gérer les matières, les notes, et visualiser les performances par rapport aux objectifs personnels.",
+  "icons": [
+    {
+      "src": "./IconTrimo.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#2563eb",
+  "background_color": "#f1f5f9"
+}

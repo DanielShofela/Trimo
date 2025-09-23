@@ -1,0 +1,5 @@
+{
+  "name": "Trimo",
+  "description": "Une application de gestion personnelle des notes scolaires pour suivre les progrès académiques, gérer les matières, les notes, et visualiser les performances par rapport aux objectifs personnels.",
+  "requestFramePermissions": []
+}
