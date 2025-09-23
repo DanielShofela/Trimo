@@ -11,19 +11,41 @@ export default defineConfig(({ mode }) => {
         VitePWA({
           registerType: 'autoUpdate',
           includeAssets: ['HeaderTrimo.png', 'HeaderTrimo2.png', 'IconTrimo.png'],
+          injectRegister: 'auto',
+          workbox: {
+            globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+            runtimeCaching: [
+              {
+                urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+                handler: 'CacheFirst',
+                options: {
+                  cacheName: 'google-fonts-cache',
+                  expiration: {
+                    maxEntries: 10,
+                    maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 jours
+                  },
+                  cacheableResponse: {
+                    statuses: [0, 200]
+                  }
+                }
+              }
+            ]
+          },
           manifest: {
             short_name: "Trimo",
             name: "Gestionnaire de Notes Scolaires",
             description: "Une application de gestion personnelle des notes scolaires",
             icons: [
               {
-                src: "./IconTrimo.png",
+                src: "IconTrimo.png",
                 sizes: "512x512",
                 type: "image/png",
                 purpose: "any maskable"
               }
             ],
-            start_url: "./index.html",
+            id: "/",
+            start_url: "/",
+            scope: "/",
             display: "standalone",
             theme_color: "#2563eb",
             background_color: "#f1f5f9"
