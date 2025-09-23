@@ -7,7 +7,7 @@ interface ConsentBannerProps {
 
 const ConsentBanner: React.FC<ConsentBannerProps> = ({ onConsent, t }) => {
   return (
-    <div className="fixed bottom-16 sm:bottom-4 left-4 right-4 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200 dark:border-slate-700 p-4 z-40 shadow-lg print:hidden rounded-lg">
+    <div className="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border-t border-slate-200 dark:border-slate-700 p-4 z-50 shadow-lg print:hidden">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
         <p className="text-sm text-slate-700 dark:text-slate-300 text-center sm:text-left">
           {t.consentMessage}
